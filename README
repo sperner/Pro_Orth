@@ -1,0 +1,44 @@
+qtlogwatcher readme
+
+Overview:
+
+Pro_Orth is a customer, documents and products
+management application for a software company
+with database backend.
+The database shema for mysql is included.
+It's built with the Qt Window Framework. 
+
+
+Authors:
+
+Sven Sperner		<cethss@gmail.com>
+Julian Kaufmann		<>
+
+
+Checkout:
+
+git clone https://github.com/sperner/Pro_Orth
+
+
+Compile:
+
+qmake
+make
+make install
+
+
+Qt-Creator:
+
+This project was developed using the Qt-Creator.
+The project file is included in the package.
+
+
+Configurations:
+
+Configuration file:	settings.conf
+Configurable through the clients settings menu
+
+
+Usage:
+
+./Pro_Orth

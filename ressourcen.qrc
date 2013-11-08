@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/about">
+        <file>database.png</file>
+        <file>db_light.png</file>
+    </qresource>
+    <qresource prefix="/main">
+        <file>db_gear.png</file>
+    </qresource>
+    <qresource prefix="/dbop">
+        <file>db_add.png</file>
+        <file>db_edit.png</file>
+    </qresource>
+    <qresource prefix="/splash">
+        <file>splash.jpg</file>
+    </qresource>
+</RCC>

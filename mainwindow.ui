@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>794</width>
+    <height>665</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Kunden-Lizenzen-Verwaltungssystem</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/main/db_gear.png</normaloff>:/main/db_gear.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout_8">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabKunden">
+       <attribute name="title">
+        <string>Kunden</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_5">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout">
+              <item>
+               <widget class="QRadioButton" name="radioFirmenkunden">
+                <property name="text">
+                 <string>Firmenkunden</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <item>
+                 <spacer name="horizontalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkZentrale">
+                  <property name="text">
+                   <string>Zentrale</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <spacer name="horizontalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="checkFiliale">
+                  <property name="text">
+                   <string>Filiale</string>
+                  </property>
+                  <property name="checked">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioStandorte">
+                <property name="text">
+                 <string>Standorte</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioPersonenkunden">
+                <property name="text">
+                 <string>Personenkunden</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupKundenFilter">
+              <property name="title">
+               <string>Abfrage-Filter</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_2">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_8">
+                   <item>
+                    <widget class="QComboBox" name="comboKunden1">
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboKunden2"/>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboKunden3"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_13">
+                   <item>
+                    <widget class="QLineEdit" name="lineKunden1"/>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineKunden2"/>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineKunden3"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushSucheKunden">
+                   <property name="text">
+                    <string>Suche</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QTableWidget" name="tableKunden">
+              <property name="midLineWidth">
+               <number>1</number>
+              </property>
+              <property name="rowCount">
+               <number>10</number>
+              </property>
+              <property name="columnCount">
+               <number>10</number>
+              </property>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_12">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_4">
+                <item>
+                 <widget class="QPushButton" name="pushNeuKunde">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Neu</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushBearbeitenKunde">
+                  <property name="text">
+                   <string>Bearbeiten</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushLoeschenKunde">
+                  <property name="text">
+                   <string>Löschen</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_2">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>95</width>
+                    <height>13</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_7">
+                <item>
+                 <widget class="QPushButton" name="pushAngebote">
+                  <property name="text">
+                   <string>Angebote</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushBestellungen">
+                  <property name="text">
+                   <string>Bestellungen</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushLieferungen">
+                  <property name="text">
+                   <string>Lieferungen</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushRechnungen">
+                  <property name="text">
+                   <string>Rechnungen</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>95</width>
+                    <height>13</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_11">
+                <item>
+                 <widget class="QPushButton" name="pushProdukte">
+                  <property name="text">
+                   <string>Produkte</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushLizenzen">
+                  <property name="text">
+                   <string>Lizenzen</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushLeasing">
+                  <property name="text">
+                   <string>Leasing</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushMaintenace">
+                  <property name="text">
+                   <string>Maintenance</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>95</width>
+                    <height>13</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabProdukte">
+       <attribute name="title">
+        <string>Produkte</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_19">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_2">
+              <item>
+               <widget class="QRadioButton" name="radioProdukte">
+                <property name="text">
+                 <string>Produkte</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioLizenzen">
+                <property name="text">
+                 <string>Lizenzen</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioLeasing">
+                <property name="text">
+                 <string>Leasing</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioMaintenance">
+                <property name="text">
+                 <string>Maintenance</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupProdukteFilter">
+              <property name="title">
+               <string>Abfrage-Filter</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_3">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_15">
+                   <item>
+                    <widget class="QComboBox" name="comboProdukte1">
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="baseSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboProdukte2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="baseSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboProdukte3">
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="baseSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_9">
+                   <item>
+                    <widget class="QLineEdit" name="lineProdukte1"/>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineProdukte2"/>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineProdukte3"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushSucheProdukte">
+                   <property name="text">
+                    <string>Suche</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_8">
+            <item>
+             <widget class="QTableWidget" name="tableProdukte">
+              <property name="midLineWidth">
+               <number>1</number>
+              </property>
+              <property name="rowCount">
+               <number>10</number>
+              </property>
+              <property name="columnCount">
+               <number>10</number>
+              </property>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_18">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_5">
+                <item>
+                 <widget class="QPushButton" name="pushNeuProdukt">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Neu</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushBearbeitenProdukt">
+                  <property name="text">
+                   <string>Bearbeiten</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushLoeschenProdukt">
+                  <property name="text">
+                   <string>Löschen</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_5">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_16">
+                <item>
+                 <widget class="QPushButton" name="pushHistorie">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Historie</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabDokumente">
+       <attribute name="title">
+        <string>Dokumente</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_7">
+        <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_21">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QRadioButton" name="radioAngebote">
+                <property name="text">
+                 <string>Angebote</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioBestellungen">
+                <property name="text">
+                 <string>Bestellungen</string>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioLieferungen">
+                <property name="text">
+                 <string>Lieferungen</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QRadioButton" name="radioRechnungen">
+                <property name="text">
+                 <string>Rechnungen</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="groupDokumenteFilter">
+              <property name="title">
+               <string>Abfrage-Filter</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_6">
+               <item row="0" column="0">
+                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_14">
+                   <item>
+                    <widget class="QComboBox" name="comboDokumente1">
+                     <property name="minimumSize">
+                      <size>
+                       <width>150</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboDokumente2"/>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboDokumente3"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_10">
+                   <item>
+                    <widget class="QLineEdit" name="lineDokumente1"/>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineDokumente2"/>
+                   </item>
+                   <item>
+                    <widget class="QLineEdit" name="lineDokumente3"/>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pushSucheDokumente">
+                   <property name="text">
+                    <string>Suche</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_11">
+            <item>
+             <widget class="QTableWidget" name="tableDokumente">
+              <property name="midLineWidth">
+               <number>1</number>
+              </property>
+              <property name="rowCount">
+               <number>10</number>
+              </property>
+              <property name="columnCount">
+               <number>10</number>
+              </property>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <row/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+              <column/>
+             </widget>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="verticalLayout_20">
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_17">
+                <item>
+                 <widget class="QPushButton" name="pushNeuDokument">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Neu</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushBearbeitenDokument">
+                  <property name="text">
+                   <string>Bearbeiten</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushLoeschenDokument">
+                  <property name="text">
+                   <string>Löschen</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QVBoxLayout" name="verticalLayout_6">
+                <item>
+                 <widget class="QPushButton" name="pushDrucken">
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string>Drucken</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>794</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuDatei">
+    <property name="title">
+     <string>Datei</string>
+    </property>
+    <addaction name="actionDateiNeu"/>
+    <addaction name="actionDateiBearbeiten"/>
+    <addaction name="actionDateiLoeschen"/>
+    <addaction name="separator"/>
+    <addaction name="actionDateiDrucken"/>
+    <addaction name="separator"/>
+    <addaction name="actionDateiBeenden"/>
+   </widget>
+   <widget class="QMenu" name="menuBearbeiten">
+    <property name="title">
+     <string>Bearbeiten</string>
+    </property>
+    <addaction name="actionBearbeitenEinstellungen"/>
+   </widget>
+   <widget class="QMenu" name="menuHilfe">
+    <property name="title">
+     <string>Hilfe</string>
+    </property>
+    <addaction name="actionHilfeUeber"/>
+   </widget>
+   <addaction name="menuDatei"/>
+   <addaction name="menuBearbeiten"/>
+   <addaction name="menuHilfe"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionDateiNeu">
+   <property name="text">
+    <string>Neu</string>
+   </property>
+  </action>
+  <action name="actionDateiBearbeiten">
+   <property name="text">
+    <string>Bearbeiten</string>
+   </property>
+  </action>
+  <action name="actionDateiLoeschen">
+   <property name="text">
+    <string>Löschen</string>
+   </property>
+  </action>
+  <action name="actionDateiBeenden">
+   <property name="text">
+    <string>Beenden</string>
+   </property>
+  </action>
+  <action name="actionExportieren">
+   <property name="text">
+    <string>Exportieren</string>
+   </property>
+  </action>
+  <action name="actionHilfeUeber">
+   <property name="text">
+    <string>Ueber</string>
+   </property>
+  </action>
+  <action name="actionBearbeitenAusschneiden">
+   <property name="text">
+    <string>Ausschneiden</string>
+   </property>
+  </action>
+  <action name="actionBearbeitenKopieren">
+   <property name="text">
+    <string>Kopieren</string>
+   </property>
+  </action>
+  <action name="actionBearbeitenEinfuegen">
+   <property name="text">
+    <string>Einfügen</string>
+   </property>
+  </action>
+  <action name="actionBearbeitenLoeschen">
+   <property name="text">
+    <string>Löschen</string>
+   </property>
+  </action>
+  <action name="actionBearbeitenEinstellungen">
+   <property name="text">
+    <string>Einstellungen</string>
+   </property>
+  </action>
+  <action name="actionDateiDrucken">
+   <property name="text">
+    <string>Drucken</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="ressourcen.qrc"/>
+ </resources>
+ <connections/>
+</ui>
