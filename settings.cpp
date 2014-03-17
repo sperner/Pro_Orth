@@ -24,6 +24,7 @@
  * 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
  */
 
+#include "connection.h"
 #include "settings.h"
 #include "statements.h"
 
@@ -113,15 +114,34 @@ void Settings::openFile( )
 
 void Settings::createSchema( )
 {
-    QSqlQuery *query = new QSqlQuery( dropSchema );
+    if( QMessageBox::question(this, "Schema wirklich erstellen?", "Wollen Sie das Datenbankschema wirklich \nunwiederruflich erstellen?",
+                              QMessageBox::Ok|QMessageBox::Cancel) == QMessageBox::Ok )
+    {
+        QFile schemaFile( this->lineSchema->text() );
+        schemaFile.open( QFile::ReadOnly );
+
+        QStringList schemaTableList = QString(schemaFile.readAll()).split( ";" );
+        foreach( const QString schemaTable, schemaTableList )
+        {
+            if( !schemaTable.trimmed().isEmpty() )
+            {
+                QSqlQuery *query = new QSqlQuery( schemaTable );
+                if( query->lastError().isValid() )
+                {
+                    QMessageBox::critical( 0, "Kann Schemazeile nicht absetzen", query->lastError().text(), QMessageBox::Cancel );
+                }
+            }
+        }
+        schemaFile.close();
+    }
 }
 
 void Settings::deleteSchema( )
 {
-    if( QMessageBox::question(this, "Schema wirklich Löschen?", "Wollen Sie das Datenbankschema wirklich \nunwiederruflich löschen?",
-                              QMessageBox::Ok|QMessageBox::Cancel) == QMessageBox::Ok )
+    if( QMessageBox::question(this, "Schema wirklich Löschen?", "Wollen Sie das Datenbankschema >" + this->lineDatenbankname->text() +
+                              "< wirklich \nunwiederruflich löschen?", QMessageBox::Ok|QMessageBox::Cancel) == QMessageBox::Ok )
     {
-        QSqlQuery *query = new QSqlQuery( dropSchema );
+        QSqlQuery *query = new QSqlQuery( dropSchema + "`" + this->lineDatenbankname->text() + "` ;" );
         if( query->lastError().isValid() )
         {
             QMessageBox::critical( 0, "Kann Schema nicht löschen", query->lastError().text(), QMessageBox::Cancel );

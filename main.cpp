@@ -62,12 +62,12 @@ int main( int argc, char *argv[] )
                 return -1;
             }
             ret = createConnection(conf->value("Datenbanktyp").toString(),
-                                               conf->value("Servername").toString(),
-                                               conf->value("Serverport").toInt(),
-                                               conf->value("Datenbankname").toString(),
-                                               conf->value("Benutzername").toString(),
-                                               conf->value("Passwort").toString()
-                                              );
+                                   conf->value("Servername").toString(),
+                                   conf->value("Serverport").toInt(),
+                                   conf->value("Datenbankname").toString(),
+                                   conf->value("Benutzername").toString(),
+                                   conf->value("Passwort").toString()
+                                  );
         }
         if( ret == true )
         {

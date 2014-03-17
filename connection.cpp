@@ -80,5 +80,6 @@ bool createConnection(QString driver, QString host, int port, QString dbname, QS
             QMessageBox::Cancel);
         return false;
     }
+
     return true;
 }

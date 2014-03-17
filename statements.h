@@ -4,7 +4,7 @@
  * Description: SQL-Statements
  *
  * @author:     Julian Kaufmann & Sven Sperner
- * @version $Id: gpl.txt,v 1.0 2010/05/18 19:20 sven Exp $
+ * @version $Id: gpl.txt,v 1.0 2014/02/11 09:40 sven Exp $
  *
  * @see The GNU Public License (GPL)
  **/
@@ -28,7 +28,8 @@
 #define STATEMENTS_H
 
 
-static QString dropSchema =             "DROP SCHEMA Pro_Orth;";
+static QString dropSchema =             "DROP SCHEMA IF EXISTS ";
+static QString createSchema =           "CREATE SCHEMA IF NOT EXISTS ";
 
 
 static QString selectFirmenkunden =     "SELECT FK.FkID, FK.Firmenname, FK.Homepage, FK.Branche, SO.Standorttyp, "
